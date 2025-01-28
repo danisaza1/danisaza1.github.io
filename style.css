@@ -1,0 +1,20 @@
+h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color :blueviolet;
+}
+
+body {
+    background-color: antiquewhite;
+
+}
+
+button {
+    font-size:medium;
+    background-color: rgb(86, 142, 46);
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+p {
+    color:cornflowerblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
