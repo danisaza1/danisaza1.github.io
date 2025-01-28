@@ -1,20 +1,114 @@
-h1 {
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+ 
+  
+  h1::before {   
+    /*before quiere decir que hay algo antes
+    osea que va a ver una especie de disposiativa*/
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(199, 67%, 46%);
+    z-index: -1;
+    transition: transform .3s ease;
+  }   
+  
+  h1 {
+    position: relative;
+    font-size: 5rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color :blueviolet;
+    color :white;
+    font-style: italic;
+    font-weight: bolder;
+  }
+    
+  /*html {
+    block-size: 100%;
+    inline-size: 100%;
+  }
+  */
+
+  body {
+    margin: 5;  /* margin créer de l’espace autour des éléments*/
+    box-sizing: border-box;
+    /*display: grid; 
+    //display affichage utilise pour le rendu d'un element
+    et disposition.he display property specifies the display behavior 
+    (the type of rendering box) of an element.*/
+    place-content: center;
+    font-family: system-ui, sans-serif;
+    background-color:rgb(14, 96, 112);
+  }
+    
+/*
+  @media (orientation: landscape ) {
+    body {
+      grid-auto-flow:column;
+    }
+  }
+  /*La règle @media en CSS permet d’appliquer des styles spécifiques en 
+fonction des caractéristiques du média, comme la taille de l’écran ou
+l’orientation de la fenêtre.*/
+
+h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color :white;
+    font-style: italic;
+    font-weight: bolder;
 }
 
-body {
-    background-color: antiquewhite;
-
-}
 
 button {
-    font-size:medium;
-    background-color: rgb(86, 142, 46);
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-size:small;
+    background-color: rgb(77, 103, 147);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    animation: wiggle 4s linear infinite;
 }
 
+
+@keyframes wiggle {  
+    /* wiggle : shake un image
+    In order to achieve a delay between wiggles, you can just include an
+     "empty chunk" of the animation... that is, a period during which
+      nothing changes. In my example, nothing changes between the 
+      0% and 80% mark, and the "wiggle" only occurs in the last 20% 
+      (which ends up coming out to half a second).*/
+
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-10deg);
+    }
+    20% {
+      transform: rotateZ(8deg);
+    }
+    25% {
+      transform: rotateZ(-8deg);
+    }
+    30% {
+      transform: rotateZ(5deg);
+    }
+    35% {
+      transform: rotateZ(-3deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
 p {
-    color:cornflowerblue;
+    color:white;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
 }
+
