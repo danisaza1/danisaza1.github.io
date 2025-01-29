@@ -46,7 +46,7 @@ h1::before {
     (the type of rendering box) of an element.*/
     place-content: center;
     font-family: system-ui, sans-serif;
-    background-color:rgb(14, 96, 112);
+    background-color:rgb(33, 72, 96);
   }
     
 /*
