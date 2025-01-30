@@ -1,0 +1,1 @@
+También hay un archivo readme que contiene todas las herramientas que utilicé en el proyecto con sus respectivos enlaces. También está disponible en los archivos de inicio.

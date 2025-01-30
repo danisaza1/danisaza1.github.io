@@ -1,29 +1,191 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="es">
+<!-- el idioma que estas escribiendo el codigo-->
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Hello!</h1>
-    <h2>Je suis Daniela IH, parfois j'essaie de coder!!!</h2>
-    <p>C'est que le debut</p>
-    <p>Je suis une femme passionnée, motivée et déterminée, qui débute dans le monde fascinant
-    de la programmation. À travers cet univers, je cherche à combiner ma soif d'apprentissage
-    avec mes valeurs humaines, car pour moi, chaque individu mérite d'être perçu et traité 
-    comme un égal. Cette philosophie guide mon approche, non seulement dans ma vie 
-    professionnelle, mais aussi dans ma manière d’interagir avec les autres et de créer.</p>
-        
+   
+   <!--Estilos CSS -->
+   
+   <link rel="stylesheet" href="style.css"> 
+   <!-- aqui importante, siempre poner en href el nombre que le pusiste a 
+   fichier. -->
 
-        <p> objectif en tant que développeuse est de créer des solutions innovantes et 
-        accessibles, tout en restant fidèle à mes convictions humanistes. J’ai hâte de 
-        pouvoir combiner mes passions, mes compétences techniques et mon respect pour 
-        l’égalité afin d’apporter ma contribution à des projets significatifs.</p>
-    <button>Ici tu peut trouver mes essaies
-    </button>
 
-</body>
+   <!-- Favicons une petite icône qui représente un site web 
+    dans diverses parties  d’un navigateur web, comme les onglets,
+    les signets, et l’historique de navigation por lo 
+    general esta al lado del HTTP. -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 
-</html>
+    <!-- Animaciones CSS CDN ce dernier est un reseau de diffusion de contenu,
+     groupe de serveurs repartis geographiquemnt qui met en cache le 
+     contenu pour etre plus rapide  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title> Daniela ISAZA H | Desarrolladora Web</title>
+   <!-- esto es el titulo que aparece en icono de la page  -->
+
+
+  </head>
+
+  <body>
+    <!-- Barra de Navegación -->
+
+    <nav>
+        <h1>Daniela ISAZAH</h1>
+        <ul class="navegacion">
+  <!-- aqui se utilisa el UL para representer une liste non ordonne 
+   des elements et LI represente un element individuel dans une liste -->   
+          <li><a href="#sobremi" class="nav-link">Acerca de Mí</a></li>
+          <li><a href="#habilidaes" class="nav-link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+<!-- href es un atributo de referencia,cuando el usuario hace 
+ click en cualquiera de los elementos de navegación, se le lleva 
+ a la sección que corresponde al elemento de navegación en el 
+ que hace click, tienen que poner el # -->
+        </ul>
+        <button class="menu-hamburguesa" id="menu-hamburguesa">
+ <!--Este estará escondido en nuestra versión de escritorio pero se 
+ mostrará en dispositivo móvil.-->
+          <ion-icon class="barras" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+    <!-- Sección Hero  -->
+    <!-- A Hero Image is a large image with text, often placed at the 
+     top of a webpage -->
+    <section class="hero" id="about">
+      <img
+        src="assets/images/matisse.jpg" 
+        alt="Daniela Ih" 
+        loading="lazy"
+        class="hero-img"
+      />
+ <!-- SVG (Scalable Vector Graphics) est un format 
+  de fichier vectoriel optimisé pour le web. Contrairement 
+  aux fichiers pixellisés comme les JPEG, les fichiers 
+  vectoriels stockent des images via des formules 
+  mathématiques basées sur des points et des lignes dans une grill
+  -SOURCE est où l'imagen est stocke 
+  -ALT  Specifies an alternate text for the image, 
+  if the image for some reason cannot be displayed
+  -LOADING Lazy: tag determines when an image is loaded. The image
+   loads when it scrolls into the viewport. This helps
+    optimize page performance by deferring the loading 
+    of off-screen images.
+  -CLASS ttribute can be assigned to an img element to 
+  apply specific styles or behaviors. 
+  -->
+      <div class="bio animate__animated animate__shakeX">
+        <h2 class="bio-titulo">HELLO!</h2>
+    <p class="bio-texto">
+      C'est que le debut </p> 
+      </div>
+</section>
+
+
+
+
+
+<!-- Sobre Mí -->
+<section class="mas-sobre">
+  <h2>Más sobre mí</h2>
+<p>Je suis une femme passionnée, motivée et déterminée, qui débute dans le monde fascinant
+  de la programmation. À travers cet univers, je cherche à combiner ma soif d'apprentissage
+  avec mes valeurs humaines, car pour moi, chaque individu mérite d'être perçu et traité 
+  comme un égal. Cette philosophie guide mon approche, non seulement dans ma vie 
+  professionnelle, mais aussi dans ma manière d’interagir avec les autres et de créer.</p><br>
+  <p> L'objectif en tant que développeuse est de créer des solutions innovantes et 
+      accessibles, tout en restant fidèle à mes convictions humanistes. J’ai hâte de 
+      pouvoir combiner mes passions, mes compétences techniques et mon respect pour 
+      l’égalité afin d’apporter ma contribution à des projets significatifs.</p>
+    </p>
+  </section>
+
+  
+
+    <!-- Sección Habilidades -->
+    <section class="habilidades" id="habilidades">
+      <h2 class="header-habilidadr">Mis mejores habilidades</h2>
+
+      <div class="contenedor-habilidades">
+        <div class="first-set animate__animated animate__pulse">
+          <img
+            src="assets/icons/html.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/js.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+          <img
+            src="assets/icons/css.png"
+            alt=""
+            loading="lazy"
+            class="icon icon-card"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+
+    <!-- Sección Contacto-->
+
+    <!-- Sección de redes sociales - Fijado a la derecha -->
+
+    <!-- Vuelve al comienzo  -->
+
+    <!-- Sección Footer  -->
+
+    <!-- Website scripts 
+     Les scripts de site web sont des morceaux de code utilisés pour
+      ajouter des fonctionnalités interactives et dynamiques à une page
+     web-->
+    <script src="assets/js/app.js"></script>
+
+
+
+
+    <!-- Ion icons scripts Ionicons est une collection d’icônes
+      open source et MIT licenciées, conçues pour être utilisées
+       dans les applications web, iOS, Android et de bureau.  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+ 
+
+
+
+
+ 
+  
+    
+
+
+
+
+
+
+
+  </body>
+  </html>
+  
+  

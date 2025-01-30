@@ -1,114 +1,209 @@
-h1::before {  
-    transform: scaleX(0);
-    transform-origin: bottom right;
-  }
-  
-  h1:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
- 
-  
-  h1::before {   
-    /*before quiere decir que hay algo antes
-    osea que va a ver una especie de disposiativa*/
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    inset: 0 0 0 0;
-    background: hsl(199, 67%, 46%);
-    z-index: -1;
-    transition: transform .3s ease;
-  }   
-  
-  h1 {
-    position: relative;
-    font-size: 5rem;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color :white;
-    font-style: italic;
-    font-weight: bolder;
-  }
-    
-  /*html {
-    block-size: 100%;
-    inline-size: 100%;
-  }
-  */
 
-  body {
-    margin: 5;  /* margin créer de l’espace autour des éléments*/
-    box-sizing: border-box;
-    /*display: grid; 
-    //display affichage utilise pour le rendu d'un element
-    et disposition.he display property specifies the display behavior 
-    (the type of rendering box) of an element.*/
-    place-content: center;
-    font-family: system-ui, sans-serif;
-    background-color:rgb(33, 72, 96);
-  }
-    
-/*
-  @media (orientation: landscape ) {
-    body {
-      grid-auto-flow:column;
-    }
-  }
-  /*La règle @media en CSS permet d’appliquer des styles spécifiques en 
-fonction des caractéristiques du média, comme la taille de l’écran ou
-l’orientation de la fenêtre.*/
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
 
-h2 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color :white;
-    font-style: italic;
-    font-weight: bolder;
+/* Variables */
+:root {
+  --font-family:  "Young Serif", serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}/* Variables fin */
+
+
+
+html {
+  /* html cest les applications à tout la page */
+  scroll-behavior: smooth;
 }
 
 
-button {
-    font-size:small;
-    background-color: rgb(77, 103, 147);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    animation: wiggle 4s linear infinite;
+/* aqui empeiza el CSS Resets
+a technique used to normalize the default 
+styles applied by different web browsers to 
+HTML elements*/
+* {
+/* est un sélecteur universel. Il permet de
+ cibler tous les éléments de la page HTML.*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+/*Fait généralement référence à la balise <a>
+ en HTML, qui est utilisée pour créer des 
+ liens hypertextes.*/
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+/* hover est un pseudo-élément qui permet de définir
+ un style pour un élément lorsqu'un utilisateur
+  passe sa souris dessus.*/
+  color: var(--secondary-color);
+}
+
+body {
+  font-family: var(--font-family);
 }
 
 
-@keyframes wiggle {  
-    /* wiggle : shake un image
-    In order to achieve a delay between wiggles, you can just include an
-     "empty chunk" of the animation... that is, a period during which
-      nothing changes. In my example, nothing changes between the 
-      0% and 80% mark, and the "wiggle" only occurs in the last 20% 
-      (which ends up coming out to half a second).*/
+/* CSS Flexbox 
+(ou Flexible Box Layout) est une méthode de mise en page très 
+puissante et flexible qui permet de disposer les éléments d'une 
+page de manière plus fluide et dynamique, sans avoir besoin 
+d'utiliser des positions ou des marges complexes. 
+Flexbox est particulièrement utile pour créer des layouts réactifs,
+ où les éléments s'ajustent automatiquement à la taille de leur 
+ conteneur. */
+nav {
+  position: sticky; /* sctiky es la propiedad de que la position 
+  permanezca en la parte superieur sin importat que */
+  top: 0;
+  left: 0;
+  z-index: 1; /* z-index con el valor de 1 se asegura de que la barra
+ de navegación se muestre sobre cualquier otro elemento de la página web.*/ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
 
-    0%, 7% {
-      transform: rotateZ(0);
-    }
-    15% {
-      transform: rotateZ(-10deg);
-    }
-    20% {
-      transform: rotateZ(8deg);
-    }
-    25% {
-      transform: rotateZ(-8deg);
-    }
-    30% {
-      transform: rotateZ(5deg);
-    }
-    35% {
-      transform: rotateZ(-3deg);
-    }
-    40%, 100% {
-      transform: rotateZ(0);
-    }
+nav h1 {
+  color: var(--color-primario);
+}
+
+nav a {
+  color: var(--color-primario);
+  transition: var(--transicion);
+}
+nav a:hover {
+  color: var(--valor-secundario);
+  border-bottom: 2px solid var(--valor-secundario);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--negrita);
+
+}
+.menu-hamburguesa {
+    color: var(--primary-color);
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
   }
 
-p {
-    color:white;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-   
-}
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+  }
+
+  .hero img {
+    height: 37.5rem;
+    width: 37.5rem;
+  }
+  
+  .bio {
+    width: 25rem;
+    padding: 0.625rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  }
+  
+  .bio h2 {
+    margin-bottom: var(--bottom-margin);
+    text-align: center;
+  }
+  
+  .bio p {
+    line-height: var(--line-height);
+    padding: 0.3rem 0;
+    text-align: center;
+  }
+
+  .mas-sobre {
+    background-color: var(--bg-color);
+    /* property is a shorthand property used to define the space
+     around an element's content inside any defined borders. */
+    padding: 1rem 1rem;
+    /* REM une unité de mesure qui est particulièrement utile pour 
+    définir des tailles relatives à la taille de la police de 
+    l'élément racine  */
+    /* PADDING correspond à l'espace entre le contenu
+     d'un élément et sa bordure, 
+     MARGIN correspond à l'espace autour de la 
+     bordure d'un élément */
+  }
+  
+  .mas-sobre h2 {
+    margin-bottom: var(--bottom-margin);
+    /* définit l'espace entre la bordure basse d'un élément 
+    et la bordure haute de l'élément adjacent. */
+    text-align: center;
+  }
+  
+  .mas-sobre p {
+    line-height: var(--line-height);
+    padding: 0.4rem;
+    text-align: justify;
+  }
+
+  .habilidades {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  
+  .encabezado-habilidad {
+    margin-bottom: 1rem;
+  }
+  
+  .contenedor-habilidad img {
+    padding: 1.25rem;
+  }
+  
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
