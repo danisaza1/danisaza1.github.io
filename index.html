@@ -45,7 +45,6 @@
    des elements et LI represente un element individuel dans une liste -->   
           <li><a href="#sobremi" class="nav-link">Acerca de Mí</a></li>
           <li><a href="#habilidaes" class="nav-link">Habilidades</a></li>
-          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
 <!-- href es un atributo de referencia,cuando el usuario hace 
  click en cualquiera de los elementos de navegación, se le lleva 
@@ -56,6 +55,11 @@
  <!--Este estará escondido en nuestra versión de escritorio pero se 
  mostrará en dispositivo móvil.-->
           <ion-icon class="barras" name="menu-outline"></ion-icon>
+<!-- L'ion-icon est un composant intégré au framework Ionic pour
+  afficher des icônes. IONIC est un framework libre d'uitlisation
+  FRAMEWORK CSS une feuille de style CSS que vous allez pouvoir 
+  importer sur votre page et qui va vous permettre d'avoir 
+  des styles prédéfinis pour un certain nombre d'éléments-->
         </button>
   </nav>
 
@@ -85,7 +89,10 @@
   apply specific styles or behaviors. 
   -->
       <div class="bio animate__animated animate__shakeX">
+        <!-- animate__animated: This class is a base class that must be added to any element you wish to animate using Animate.css.
+        animate__shakeX: This specific class is used to apply a horizontal shaking effect to an element -->
         <h2 class="bio-titulo">HELLO!</h2>
+        <br>
     <p class="bio-texto">
       C'est que le debut </p> 
       </div>
@@ -140,15 +147,126 @@
       </div>
     </section>
 
-    <!-- Sección Proyectos -->
+
 
     <!-- Sección Contacto-->
 
+    <section class="contacto" id="contacto">
+      <h2>Contactame</h2>
+      <div class="formulario-contacto-contenedor">
+          <form action="https://formspree.io/f/mjkgrkqk" method="POST">
+  <!-- Con Formspree, puedes recibir el mensaje directamente a la bandeja
+    de entrada de tu correo electrónico sin necesidad de configurar un
+     servidor con PHP o JavaScript complejos. -->
+            <div class="control-formulario">
+              <label for="name">Nombre</label>
+    <!-- También hay un atributo  name para todos los campos de input. 
+    Esto es requerido por el servicio de envió de formularios de
+     Formspree. -->
+              <input
+                type="text"
+                id="name"
+                name="sender-name"
+                placeholder="Escribe tu nombre"
+                class="input-field"
+                required
+              />
+           <!-- required , de esa forma,  el formulario se niega a 
+              enviar la información si el usuario deja algún campo 
+              vacío. -->
+            </div>
+            <div class="control-formulario">
+              <label for="email">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="sender-email"
+                placeholder="Ingreso tu correo electrónico"
+                class="input-field"
+                required
+              />
+            </div>
+            <div class="control-formulario">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                cols="60"
+                rows="10"
+                placeholder="Escribe tu mensaje"
+                name="mensaje"
+                class="input-field"
+                required
+              ></textarea>
+              <!-- textarea para que la gente escriba el mensaje que quieran enviar  -->
+            </div>
+            <input
+              type="submit"
+              value="Enviar"
+              id="submit-btn"
+              class="submit-btn"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+
     <!-- Sección de redes sociales - Fijado a la derecha -->
+    <div class="sociales">
+      <a href="#" target="_self"
+        >
+        <!--  Lorsque vous utilisez a href="#" 
+          target="_blank", cela signifie que le lien va s'ouvrir
+           dans une nouvelle fenêtre ou un nouvel onglet, sans 
+           quitter la page actuelle. 
+           target="_self" le lien va s'ouvrir dans la meme fenetre
+           ou onglet  -->
+           
+           <img
+          src="assets/icons/icons8-instagram.png"
+          alt="Instagram"  
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <!-- loading attribute on an <img> tag determines when an image 
+       is loaded. The possible values are lazy and eager.
+  Eager: This is the default value. The image loads and displays
+   immediately after the page loads.
+Lazy: The image loads when it scrolls into the viewport. 
+This helps to optimize page performance by deferring the loading 
+of off-screen images.
+      gifs animados de la plataforma icons8. -->
+      <a href="#" target="_self"
+        ><img
+          src="assets/icons/icons8-linkedin.png"
+          alt="Linkedin"
+          loading="lazy"
+          class="socicon"
+      /></a>
+      <a href="#" target="_self"
+        ><img src="assets/icons/icons8-github.png" alt="Github" class="socicon"
+      /></a>
+    </div>
+    
+
 
     <!-- Vuelve al comienzo  -->
 
     <!-- Sección Footer  -->
+
+    <!-- Le footer CSS est une partie de la feuille de style CSS utilisée 
+    pour styliser le pied de page d'un site Web. Le pied de page, 
+    représenté par le tag HTML  footer , est généralement utilisé 
+      pour contenir des informations telles que les droits d'auteur, 
+      les coordonnées, les liens de navigation et d'autres éléments
+       pertinents. -->
+
+
+
+
+
+
+
 
     <!-- Website scripts 
      Les scripts de site web sont des morceaux de code utilisés pour

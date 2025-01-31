@@ -8,15 +8,18 @@
   --bold-font: 700;
   --bolder-font: 900;
   --bg-color: #fcfcfc;
-  --primary-color: #4756df;
+  --primary-color: #4756df;  
   --secondary-color: #ff7235;
-  --primary-shadow: #8b8eaf;
+  --primary-shadow: #747bc7;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
   --bottom-margin-2: 1rem;
   --line-height: 1.7rem;
   --transition: 0.3s;
 }/* Variables fin */
+/* aqui vamos a poner las variables que indican los valores de 
+los otros valores. por ejemplo, si ponemos primary-color entonces
+en las otras variables pones lo mismo y siempre va a hacer ese color */
 
 
 
@@ -132,21 +135,13 @@ nav ul li {
   
   .bio {
     width: 25rem;
-    padding: 0.625rem;
+    padding: 1rem;
+    margin: 7rem;
     border-radius: 6px;
     box-shadow: 0px 2px 15px 2px var(--primary-shadow);
-  }
-  
-  .bio h2 {
-    margin-bottom: var(--bottom-margin);
     text-align: center;
   }
   
-  .bio p {
-    line-height: var(--line-height);
-    padding: 0.3rem 0;
-    text-align: center;
-  }
 
   .mas-sobre {
     background-color: var(--bg-color);
@@ -191,19 +186,97 @@ nav ul li {
   }
   
   .icon {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    border-radius: 11px; 
+    /* border-radius es una bordura para que pase de cuadrado a redondo */
+    padding: 10px;
+    margin: 4px;
+    box-shadow: 0 3px 10px var(--primary-shadow);
+  }
+
+  .contacto {
+    margin-top: 2rem;
+  }
+  
+  .contacto h2 {
+    text-align: center;
+    margin-bottom: var(--bottom-margin-2);
+    /* La fonction CSS var() est utilisée pour 
+    insérer la valeur d'une variable CSS.*/
+  } 
+  
+  .formulario-contacto-contenedor {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px; color: var(--primary-shadow);
   }
 
 
+  .control-formulario label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color); 
+}
+
+.control-formulario textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+ }
+
+.control-formulario .input-field {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  border: 2px outset var(--primary-color);
+  font-size: 0.90rem;
+  font-family: var(--font-family);
+}
 
 
 
 
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #fff;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  color: var(--primary-color); 
+  font-family: var(--font-family) ;
+} 
+
+
+.submit-btn:hover {
+  background-color:lavender;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
 
 
 
+.sociales {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%; 
+}
+/* display flex est une méthode puissante pour disposer et 
+aligner des éléments de manière réactive et 
+flexible, simplifiant ainsi la mise en page des 
+sites web. */
 
-
-
+.socicon {
+  width: 2rem;
+  height: 2rem;
+}
 
